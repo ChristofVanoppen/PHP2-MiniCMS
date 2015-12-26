@@ -13,6 +13,7 @@ Route::get('/login', 'UsersController@getLogin');
 Route::post('/login','Auth\AuthController@postLogin');
 
 Route::get('/content','PostController@getContent');
+Route::post('/content','PostController@postComment');
 
 Route::get('/content/add','PostController@getAddContent');
 Route::post('/content/add','PostController@postAddContent');

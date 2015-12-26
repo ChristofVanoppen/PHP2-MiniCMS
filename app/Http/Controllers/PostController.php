@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Comment;
 use App\Post;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -15,19 +16,20 @@ class PostController extends Controller
 
         if (!Auth::check())
         {
-            return redirect('/login')->with('error','you need to be logged in.');
+            return redirect('/login')->with('error','You need to be logged in!');
         }
 
         $media = Post::all();
+        $comments = Comment::all();
 
-        return view('blog.content',compact('media'));
+        return view('blog.content',compact('media',"comments"));
 
     }
     public function getAddContent(){
 
         if (!Auth::check())
         {
-            return redirect('/login')->with('message','you need to be logged in.');
+            return redirect('/login')->with('message','You need to be logged in!');
         }
 
         return view('blog.add');
@@ -64,9 +66,11 @@ class PostController extends Controller
         else
         {
 
-            return redirect('/content/add')->with('error','Cant use url!');
+            $type = 'other';
+            $mediaId = 'null';
 
         }
+
 
         $userId = Auth::id();
 
@@ -80,6 +84,21 @@ class PostController extends Controller
 
         return redirect('/content')->with('success','Post successfully created!');
 
+    }
+
+    public function postComment(){
+
+        $postComment = Input::get('comment');
+        $postId = Input::get('post');
+        $userId = Auth::id();
+
+        $comment = new Comment();
+        $comment->comment = $postComment;
+        $comment->userId = $userId;
+        $comment->postId = $postId;
+        $comment->save();
+
+        return redirect('/content')->with('success','Post successfully posted!');
     }
 }
 
