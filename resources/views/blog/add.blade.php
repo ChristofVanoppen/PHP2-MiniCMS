@@ -11,15 +11,19 @@
              <p>{{ Session::get('error') }}</p>
         </div>
     @endif
-
+    <div class="container">
+        <div class="card card-container">
  {!!   Form::open(array('url' => 'content/add')) !!}
+     <h1 class="titel">Add URL</h1>
 
     <p>
-        {!! Form::label('url', 'Website url') !!}
-        {!! Form::text('url', Input::old('url'), array('placeholder' => 'url.com')) !!}
+        <!--{!! Form::label('url', 'Website url') !!}-->
+        {!! Form::text('url', Input::old('url'), array('class' => 'form-control', 'placeholder' => 'https://www.name.com')) !!}
     </p>
 
 
-    <p>{!! Form::submit('Submit') !!}</p>
+    <p>{!! Form::submit('Submit', array('class' => 'class="btn btn-lg btn-primary btn-block btn-signin"')) !!}</p>
     {!! Form::close() !!}
+        </div>
+</div>
 @endsection

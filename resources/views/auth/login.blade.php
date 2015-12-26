@@ -1,8 +1,10 @@
 @extends('master')
 
 @section('content')
+    <div class="container">
+        <div class="card card-container">
  {!!   Form::open(array('url' => 'login')) !!}
-    <h1>Login</h1>
+    <h1 class="titel">Login</h1>
 
     <!-- if there are login errors, show them here -->
     <p>
@@ -11,15 +13,17 @@
     </p>
 
     <p>
-        {!! Form::label('email', 'Email Address') !!}
-        {!! Form::text('email', Input::old('email'), array('placeholder' => 'awesome@awesome.com')) !!}
+         <!--{!! Form::label('email', 'Email Address') !!}-->
+        {!! Form::text('email', Input::old('email'), array('class' => 'form-control', 'placeholder' => 'Email')) !!}
     </p>
 
     <p>
-        {!! Form::label('password', 'Password') !!}
-        {!! Form::password('password') !!}
+         <!--{!! Form::label('password', 'Password') !!}-->
+        {!! Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password')) !!}
     </p>
 
-    <p>{!! Form::submit('Submit!') !!}</p>
+    <p>{!! Form::submit('Sign in', array('class' => 'class="btn btn-lg btn-primary btn-block btn-signin"')) !!}</p>
     {!! Form::close() !!}
+    </div>
+</div>
 @endsection
