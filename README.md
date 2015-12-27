@@ -1,3 +1,11 @@
+## Repository Link
+
+https://github.com/ChristofVanoppen/PHP2-MiniCMS
+
+## Secret code
+
+qoWJY5J1q8j4XNKfFfhCywUpLY2ir7PL
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)

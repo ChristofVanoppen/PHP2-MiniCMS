@@ -1,7 +1,7 @@
 @extends('master')
-
+<div class="container">
 @section('content')
-    <div class="container">
+    
         <div class="card card-container">
  {!!   Form::open(array('url' => 'login')) !!}
     <h1 class="titel">Login</h1>
@@ -20,6 +20,10 @@
     <p>
          <!--{!! Form::label('password', 'Password') !!}-->
         {!! Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password')) !!}
+    </p>
+
+    <p>
+            <a href="/register">Nog geen account? Klik hier!</a>
     </p>
 
     <p>{!! Form::submit('Sign in', array('class' => 'class="btn btn-lg btn-primary btn-block btn-signin"')) !!}</p>

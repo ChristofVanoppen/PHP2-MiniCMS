@@ -1,11 +1,15 @@
-body, html {
-    height: 100%;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+body{
+   /*height: 100%;*/
+   background-repeat: no-repeat;
+   background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
 }
 
 /* Login form */
-
+.container{
+	height: 100%;
+   background-repeat: no-repeat;
+   background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+}
 .card-container.card {
     max-width: 350px;
     padding: 40px 40px;
@@ -35,7 +39,6 @@ body, html {
 }
 .titel{
 text-align: center;
-color:#337ab7;
 padding-bottom: 20px;
 }
 
@@ -43,4 +46,35 @@ padding-bottom: 20px;
 
 .card2{
 	margin-top: 100px;
+}
+
+/* Content page */
+
+.card-container.card3 {
+    max-width: 800px;
+    padding: 40px 40px;
+    text-align: center;
+    background-color: #e9eaed;
+}
+.card3{
+	margin-top: 20px;
+}
+.blogPost{
+	background-color: #fff;
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+.blogPostComment{
+background-color: #f6f7f8;
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+#btn-post{
+	width: 75px;
+    text-align: center;
+    margin: 0 auto;
 }

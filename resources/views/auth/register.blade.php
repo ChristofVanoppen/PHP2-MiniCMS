@@ -1,7 +1,7 @@
 @extends('master')
-
-@section('content')
     <div class="container">
+@section('content')
+
         <div class="card card2 card-container">
     {!! Form::open(array('url' => 'register')) !!}
     <h1 class="titel">Register</h1>

@@ -1,5 +1,5 @@
 @extends('master')
-
+    <div class="container">
 @section('content')
   @if(Session::has('message'))
         <div class="alert alert-success">
@@ -11,7 +11,7 @@
              <p>{{ Session::get('error') }}</p>
         </div>
     @endif
-    <div class="container">
+
         <div class="card card-container">
  {!!   Form::open(array('url' => 'content/add')) !!}
      <h1 class="titel">Add URL</h1>
